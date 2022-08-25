@@ -1,0 +1,198 @@
+.about-service {
+  position: relative;
+  z-index: 300;
+
+  background-color: @basic-blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 39px;
+    left: 0;
+    width: 113px;
+    height: 132px;
+    border-radius: 0 20px 20px 0;
+
+    background-color: #141B3B;
+  }
+}
+
+.about-service__wrapper {
+  position: relative;
+  padding: 0 25px;
+  padding-top: 72px;
+  min-height: 320px;
+
+  z-index: 11;
+
+  background-image: url("../img/about-service-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 292px;
+  background-position: 50% 39px;
+}
+
+.about-service__title {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0 24px;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: @special-orange;
+}
+
+.about-service__text {
+  margin: 0;
+  padding: 0 24px;
+
+  color: #fff;
+}
+
+.about-service__text--top {
+  margin-bottom: 20px;
+
+  font-weight: 300;
+}
+
+.about-service__text--bottom {
+  font-weight: 700;
+}
+
+.about-service__button {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .about-service {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    &::before {
+      top: 96px;
+      left: 40px;
+      width: calc(100% - 80px);
+      height: 212px;
+      border-radius: 20px;
+    }
+  }
+
+  .about-service__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title ."
+      "text ."
+      "button .";
+
+    padding: 0 40px;
+    padding-top: 137px;
+    padding-bottom: 89px;
+
+    background-image: url("../img/about-service-tablet.png");
+    background-size: 376px;
+    background-position: 100% calc(100% - 89px);
+  }
+
+  .about-service__title {
+    grid-area: title;
+
+    padding: 0 34px;
+    margin-bottom: 40px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .about-service__text-wrapper {
+    grid-area: text;
+  }
+
+  .about-service__text {
+    padding: 0 34px;
+    margin-bottom: 52px;
+
+    //width: calc(50% - 74px);
+  }
+
+  .about-service__text--top {
+    margin-bottom: 31px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .about-service__text--bottom {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .about-service__button {
+    grid-area: button;
+    display: block;
+    margin-left: 34px;
+
+    width: 276px;
+
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-service {
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+
+    &::before {
+      top: 70px;
+      left: 60px;
+      width: 212;
+      height: 212px;
+    }
+  }
+
+  .about-service__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "title title . ."
+      "text text . ."
+      "button . . .";
+    column-gap: 60px;
+
+    padding: 0 60px;
+    padding-top: 132px;
+    min-height: 615px;
+
+    background-image: url("../img/about-service-desktop.png");
+    background-size: 630px;
+    background-position: calc(100% - 60px) 85px;
+  }
+
+  .about-service__title {
+    padding: 0 72px;
+    margin-bottom: 57px;
+  }
+
+  .about-service__text {
+    padding: 0 72px;
+    margin-bottom: 85px;
+  }
+
+  .about-service__text--top {
+    margin-bottom: 38px;
+
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .about-service__text--bottom {
+
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  .about-service__button {
+    margin-left: 72px;
+  }
+}

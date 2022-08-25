@@ -1,0 +1,228 @@
+.companions {
+  position: relative;
+  z-index: 100;
+
+  margin-top: -60px;
+  padding-top: 60px;
+
+  background-color: #192144;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.companions__wrapper {
+  position: relative;
+
+  padding: 0 25px;
+  padding-top: 68px;
+  padding-bottom: 31px;
+
+  background-image: url("../img/companions-bg-man.png");
+  background-repeat: no-repeat;
+  background-size: 143px;
+  background-position: calc(100% - 25px) 35px;
+}
+
+.companions__title {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0 24px;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: @special-orange;
+}
+
+.companions__text-box {
+  margin-bottom: 54px;
+  padding: 0 24px;
+
+  color: #fff;
+}
+
+.companions__text {
+  margin: 0;
+}
+
+.companions__text--top {
+  margin-bottom: 25px;
+
+  font-weight: 300;
+}
+
+.companions__text--bottom {
+  font-weight: 700;
+}
+
+.companions__users-list {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -33px;
+    left: -25px;
+    width: 64px;
+    height: 71px;
+
+    background-image: url("../img/companions-bg-woman-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 64px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .companions {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .companions__wrapper {
+    z-index: 700;
+
+    padding: 0 40px;
+    padding-top: 141px;
+    padding-bottom: 87px;
+
+    background-image: url("../img/companions-bg-woman-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 285px;
+    background-position: calc(100% - 74px) 80px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      z-index: -10;
+      top: 71px;
+      left: 40px;
+
+      width: 212px;
+      height: 212px;
+
+      background-color: #141B3B;
+
+      border-radius: 20px;
+    }
+  }
+
+  .companions__title {
+    padding: 0 34px;
+    margin-bottom: 55px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .companions__text-box {
+    width: 50%;
+
+    padding: 0 34px;
+    margin-bottom: 59px;
+  }
+
+  .companions__text--top {
+    margin-bottom: 39px;
+
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .companions__text--bottom {
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  .companions__users-list {
+    margin-bottom: 81px;
+    padding: 0 34px;
+
+    &:before {
+      z-index: -100;
+
+      top: -97px;
+      left: 0;
+      width: 143px;
+      height: 143px;
+
+      background-image: url("../img/companions-bg-man.png");
+      background-repeat: no-repeat;
+      background-size: 143px;
+    }
+  }
+
+  .companions__button {
+    width: calc(100% - 68px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions {
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+  }
+
+  .companions__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "title . list list"
+      "text text list list"
+      "button button list list";
+    column-gap: 60px;
+
+    padding: 0 60px;
+    padding-top: 130px;
+    padding-bottom: 134px;
+
+    background-position: 190px calc(100% - 80px);
+
+  }
+
+  .companions__title {
+    grid-area: title;
+
+    padding: 0;
+    padding-left: 72px;
+  }
+
+  .companions__text-box {
+    grid-area: text;
+
+    padding: 0;
+    padding-left: 72px;
+    margin-bottom: 85px;
+
+    width: 430px;
+  }
+
+  .companions__text--top {
+    margin-bottom: 24px;
+
+    line-height: 33px;
+  }
+
+  .companions__users-list {
+    grid-area: list;
+
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      top: 0;
+      left: -183px;
+    }
+  }
+
+  .companions__button {
+    grid-area: button;
+
+    width: 280px;
+
+    margin-top: auto;
+    margin-left: 72px;
+  }
+}

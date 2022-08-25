@@ -1,0 +1,62 @@
+.button {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+
+  height: 62px;
+  width: 100%;
+  padding: 22px 23px;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  color: @basic-blue-light;
+  background-color: @basic-yellow;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 23px;
+    top: calc(50% - 6px);
+
+    width: 11px;
+    height: 12px;
+
+    background-image: url("../img/button-arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 80px;
+
+    margin: 0 auto;
+    padding-top: 29px;
+    padding-bottom: 27px;
+    padding-left: 33px;
+
+    border-radius: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      right: 27px;
+
+      width: 14px;
+      height: 12px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+
+    &::before {
+      right: 31px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.directions {
+  position: relative;
+  z-index: 200;
+
+  margin-top: -60px;
+  padding-top: 60px;
+
+  background-color: @background-blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.directions__wrapper {
+  position: relative;
+
+  padding: 0 25px;
+  padding-top: 71px;
+  padding-bottom: 34px;
+}
+
+.directions__title {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0 24px;
+
+  color: @special-orange;
+}
+
+.directions__text {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0 24px;
+
+  color: @special-grey;
+}
+
+.directions__country-list {
+  margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .directions {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .directions__wrapper {
+    padding: 0 40px;
+    padding-top: 73px;
+    padding-bottom: 80px;
+
+    background-image: url("../img/directions-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 288px;
+    background-position: calc(100% - 40px) 80px;
+  }
+
+  .directions__title {
+    padding: 0 34px;
+    margin-bottom: 57px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .directions__text {
+    width: 50%;
+    padding: 0 34px;
+    margin-bottom: 104px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .directions__country-list {
+    position: relative;
+
+    padding: 0 34px;
+    margin-bottom: 46px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -38px;
+      left: 0;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+
+      background-color: #E2E5F2;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .directions {
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+  }
+
+  .directions__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas:
+      "list list title title"
+      "list list text text"
+      "list list button button";
+    column-gap: 60px;
+
+    padding: 0 60px;
+    padding-bottom: 165px;
+    padding-top: 161px;
+
+    background-position: calc(100% - 60px) 88px;
+  }
+
+  .directions__country-list {
+    grid-area: list;
+
+    padding: 0;
+    padding-left: 72px;
+    margin: 0;
+
+    &::before {
+      top: -71px;
+    }
+  }
+
+  .directions__title {
+    grid-area: title;
+
+    padding-left: 112px;
+  }
+
+  .directions__text {
+    grid-area: text;
+
+    padding-left: 112px;
+    margin-bottom: 98px;
+  }
+
+  .directions__button {
+    grid-area: button;
+
+    width: 275px;
+
+    margin-left: 112px;
+  }
+}

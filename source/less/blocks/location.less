@@ -1,0 +1,173 @@
+.location {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -60px;
+  padding-top: 60px;
+
+  background-color: @basic-yellow;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.location__wrapper {
+  padding: 0 25px;
+  padding-top: 33px;
+  padding-bottom: 35px;
+}
+
+.location__address {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 32px;
+  padding-left: 61px;
+
+  width: 150px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: @basic-blue-light;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: calc(50% - 22.5px);
+
+    width: 45px;
+    height: 45px;
+
+    background-color: @basic-blue;
+    background-image: url("../img/location-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: 50%;
+
+    border-radius: 50%;
+  }
+}
+
+.location__link {
+  position: relative;
+  display: block;
+
+  padding: 18px;
+  padding-left: 22px;
+
+  box-sizing: border-box;
+  height: 62px;
+
+  text-decoration: none;
+
+  border: 3px solid #192144;
+  border-radius: 10px;
+
+  background-color: @basic-yellow;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 22px;
+    top: calc(50% - 7px);
+
+    width: 13px;
+    height: 14px;
+
+    background-image: url("../img/button-arrow.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.location__link-text {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  color: @basic-blue-light;
+}
+
+@media (min-width: @tablet-width) {
+  .location {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .location__wrapper {
+    padding: 0 40px;
+    padding-top: 70px;
+    padding-bottom: 84px;
+  }
+
+  .location__address {
+    margin-bottom: 62px;
+    padding-left: 129px;
+
+    width: auto;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      top: calc(50% - 34px);
+      left: 35px;
+
+      width: 68px;
+      height: 68px;
+
+      background-color: @basic-blue;
+      background-image: url("../img/location-icon.svg");
+      background-repeat: no-repeat;
+      background-size: 32px;
+    }
+  }
+
+  .location__link {
+    height: 80px;
+
+    padding-top: 24px;
+    padding-bottom: 26px;
+    padding-left: 37px;
+    margin: 0 35px;
+
+    border-radius: 20px;
+
+    &::before {
+      width: 12px;
+    }
+  }
+
+  .location__link-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .location {
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+  }
+
+  .location__wrapper {
+    padding: 0 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 147px;
+  }
+
+  .location__address {
+    padding-top: 30px;
+    padding-bottom: 32px;
+    margin: 0;
+  }
+
+  .location__link {
+    width: 324px;
+  }
+}

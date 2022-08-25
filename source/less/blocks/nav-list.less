@@ -1,0 +1,39 @@
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__link {
+    display: block;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #192144;
+}
+
+@media (min-width: @tablet-width) {
+    .nav__link {
+        font-size: 60px;
+        line-height: 71px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .nav-list {
+        display: flex;
+        column-gap: 34px;
+    }
+
+    .nav__link {
+        padding: 0;
+        font-size: 20px;
+        line-height: 20px;
+
+        color: #fff;
+    }
+}

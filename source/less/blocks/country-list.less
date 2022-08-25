@@ -1,0 +1,177 @@
+.country-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.country__item {
+  max-width: 400px;
+
+  margin: 0 auto;
+}
+
+.country__img {
+  border-radius: 10px 10px 0 0;
+}
+
+.country__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "title number"
+    "text number";
+
+  z-index: 500;
+
+  margin-top: -16px;
+  padding-top: 26px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 34px;
+
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.country__flag {
+  position: absolute;
+  top: -13px;
+  left: 25px;
+}
+
+.country__title {
+  grid-area: title;
+
+  margin: 0;
+  margin-bottom: 2px;
+
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.country__text {
+  grid-area: text;
+
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+
+  color: @special-grey;
+  opacity: 0.3;
+}
+
+.country__user-info {
+  grid-area: number;
+  display: flex;
+
+  margin-left: auto;
+}
+
+.country__user-icon {
+  padding-top: 2px;
+
+  fill: #192144;
+  opacity: 0.1;
+}
+
+.country__user-number {
+  margin-left: 5px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+
+  opacity: 0.3;
+
+}
+
+@media (min-width: @tablet-width) {
+  .country__item {
+    max-width: 100%;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content img";
+  }
+
+  .country__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-bottom: 20px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .country__flag {
+    width: 70px;
+    height: 47px;
+
+    top: 17px;
+    left: auto;
+    right: -35px;
+  }
+
+  .country__title {
+    margin-bottom: 5px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .country__text {
+    margin-bottom: 17px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .country__img-box {
+    grid-area: img;
+  }
+
+  .country__img {
+    border-radius: 0 20px 20px 0;
+  }
+
+  .country__user-info {
+    margin: 0;
+  }
+
+  .country__user-icon {
+    width: 24px;
+    height: 24px;
+
+    padding-top: 0;
+  }
+
+  .country__user-number {
+    margin-left: 8px;
+    padding-top: 2px;
+
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .country__img {
+    min-width: 187px;
+  }
+}
